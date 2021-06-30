@@ -22,10 +22,11 @@ export class Example implements Point3D {
 /** ------ Type aliases ------ */
 type InputOnChange = (newValue: InputValue) => void;
 
-type InputValue = string;
+type InputString = string;
+type InputValue = "text" | "email";
 
 export type InputProps = {
-  type: "text" | "email";
-  value: string;
-  onChange: (newValue: string) => void;
+  type: InputValue;
+  value: InputString;
+  onChange: InputOnChange;
 };
